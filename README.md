@@ -22,3 +22,6 @@ There is a simple card game called war. The basicare are:
 1. Provide at least one unit test for your client code and one unit test for your backend code
 2. Use a database to store your data
 3. Containerize your application using docker
+
+## Submit 
+Please fork this project and create a PR when you are ready for a review. If you have any questions please create an issue and call me out @jhorlin so that we anyone else participating can benefit from our Q and A.
