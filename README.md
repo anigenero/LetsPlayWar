@@ -1,2 +1,24 @@
-# LetsPlayWar
-Coding Challenge
+# Lets Play War
+## Purpose
+The purpose of this project is to not only test your ability to solve a problem, but also understand how you go about solving a problem. You do not need to complete this project, but the closer you get the easier it is to evaluate. Once you feel you have doen enough we will review your results and talk about what decitions you make and why. It is more important to speak to why you made a decition that macking the "right" choice.
+
+## Business requirements
+There is a simple card game called war. The basicare are:
+1. Start with a deck of cards (no joker)
+2. In stead of deviding the deck the dealer will hold onto the cards
+3. The dealer will play with 4 decks and shuffle all 4 decks together so we will have 4 of every card mixed into 4 decks.
+5. When all cards have been played they will be shuffled again.
+6. Multiple players can play at the same time sharing the same 4 decks.
+7. Each player will initiate the round by asking the dealer to deal one card for the player and one card for the dealer.
+8. Each plater can play as fast or as slow as they wish.
+ 
+## Technical Requirements
+1. There is no time limit. Take as long as you think you need.
+2. You must use a front end library or framework such as angular, react, vue, eccetera.
+3. You must write a backend component, but you are free to use any language you with. Current laguages used at LOD are Java, Golang, and typescript/javascript running on node.js but you are free to use whatever language you wish.
+4. Please provide details on how to compile and run your example.
+
+## Extra Credit but not required
+1. Provide at least one unit test for your client code and one unit test for your backend code
+2. Use a database to store your data
+3. Containerize your application using docker
