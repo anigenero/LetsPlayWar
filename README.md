@@ -3,14 +3,14 @@
 The purpose of this project is to not only test your ability to solve a problem, but also understand how you go about solving a problem. You do not need to complete this project, but the closer you get the easier it is to evaluate. Once you feel you have doen enough we will review your results and talk about what decitions you make and why. It is more important to speak to why you made a decition that macking the "right" choice.
 
 ## Business requirements
-There is a simple card game called war. The basicare are:
-1. Start with a deck of cards (no joker)
-2. In stead of deviding the deck the dealer will hold onto the cards
-3. The dealer will play with 4 decks and shuffle all 4 decks together so we will have 4 of every card mixed into 4 decks.
-5. When all cards have been played they will be shuffled again.
-6. Multiple players can play at the same time sharing the same 4 decks.
-7. Each player will initiate the round by asking the dealer to deal one card for the player and one card for the dealer.
-8. Each plater can play as fast or as slow as they wish.
+There is a simple card game called [war](https://www.bicyclecards.com/how-to-play/war/). With some modifications:
+1. In stead of deviding one deck the dealer will hold onto the cards
+2. The dealer will play with 4 decks and shuffle all 4 decks together so we will have 4 of every card mixed into 4 decks.
+3. For simplicity if there is a tie the dealer and player will take there respective cards.
+4. Instead of dealing all the cards, after 10 rounds a winner is declared (the person with the most cards)
+5. Multiple players can play at the same time.
+6. Each player will initiate the round by asking the dealer to deal one card for the player and one card for the dealer.
+7. Each plater can play as fast or as slow as they wish.
  
 ## Technical Requirements
 1. There is no time limit. Take as long as you think you need.
