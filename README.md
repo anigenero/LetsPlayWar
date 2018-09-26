@@ -1,4 +1,4 @@
-# Lets Play War
+# Let's Play War
 ## Purpose
 The purpose of this project is to not only test your ability to solve a problem, but also understand how you go about solving a problem. You do not need to complete this project, but the closer you get the easier it is to evaluate. Once you feel you have done enough we will review your results and talk about what decisions you made and why. It is more important to speak to why you made a decision than making the "right" choice.
 
