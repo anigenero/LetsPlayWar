@@ -1,0 +1,11 @@
+type Person {
+    name: String!
+}
+
+type Game {
+    people: [Person]
+}
+
+type Query {
+    games: [Game]
+}

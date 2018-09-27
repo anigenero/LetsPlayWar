@@ -1,0 +1,123 @@
+{
+  "name": "lpw-web",
+  "version": "1.0.0",
+  "description": "Client for LetsPlayWar",
+  "main": "index.js",
+  "scripts": {
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "start": "webpack-dev-server --debug --output-pathinfo --history-api-fallback --mode development --hot --inline --progress --colors --https --port 3000",
+    "test": "jest --coverage"
+  },
+  "author": {
+    "name": "Robin Schultz",
+    "email": "robin@anigenero.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:anigenero/LetsPlayWar.git"
+  },
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@types/enzyme": "^3.1.14",
+    "@types/enzyme-adapter-react-16": "^1.0.3",
+    "@types/history": "^4.7.0",
+    "@types/jest": "^23.3.2",
+    "@types/lodash": "^4.14.116",
+    "@types/react-dom": "^16.0.7",
+    "@types/react-redux": "^6.0.9",
+    "@types/react-router": "^4.0.31",
+    "@types/react-router-dom": "^4.3.1",
+    "babel-loader": "^8.0.2",
+    "bitbar-webpack-progress-plugin": "^1.0.0",
+    "css-loader": "^1.0.0",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "jest-localstorage-mock": "^2.2.0",
+    "json-loader": "^0.5.7",
+    "mini-css-extract-plugin": "^0.4.3",
+    "node-sass": "^4.9.3",
+    "react-hot-loader": "^4.3.11",
+    "sass-loader": "^7.1.0",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^0.23.0",
+    "ts-jest": "^23.10.2",
+    "ts-loader": "^5.2.1",
+    "tslint": "^5.11.0",
+    "tslint-react": "^3.6.0",
+    "tslint-sonarts": "^1.8.0",
+    "typescript": "^3.0.3",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.1.1",
+    "@material-ui/icons": "^3.0.1",
+    "apollo-cache-inmemory": "^1.2.10",
+    "apollo-client": "^2.4.2",
+    "apollo-link": "^1.2.3",
+    "apollo-link-context": "^1.0.9",
+    "apollo-link-error": "^1.1.1",
+    "apollo-link-http": "^1.5.5",
+    "aws-appsync": "^1.3.4",
+    "aws-appsync-react": "^1.1.4",
+    "connected-react-router": "^4.5.0",
+    "graphql": "^14.0.2",
+    "graphql-tag": "^2.9.2",
+    "history": "^4.7.2",
+    "jss": "^9.8.7",
+    "lodash": "^4.17.11",
+    "log4js2": "^2.0.0-alpha1",
+    "react": "^16.5.2",
+    "react-apollo": "^2.2.1",
+    "react-dom": "^16.5.2",
+    "react-localize-redux": "^3.4.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-observable": "^1.0.0",
+    "rxjs": "^6.3.3",
+    "typeface-roboto": "0.0.54"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "<rootDir>/src/__mocks__/style.mock.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/__mocks__/file.mock.ts"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "setupFiles": [
+      "jest-localstorage-mock",
+      "<rootDir>/jest.setup.js",
+      "<rootDir>/src/__mocks__/requestAnimationFrame.js",
+      "<rootDir>/src/__mocks__/enzyme.setup.ts"
+    ],
+    "transform": {
+      "^.+\\.ts(x|)?$": "ts-jest",
+      "^.+\\.js(x|)?$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(react-apollo|apollo-client))"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    }
+  }
+}

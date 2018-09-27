@@ -1,0 +1,86 @@
+{
+	"name": "lpw-api",
+	"version": "1.0.0",
+	"description": "LetsPlayWar API endpoint",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "rm -rf ./dist && webpack --progress --colors --mode development",
+		"build-graph": "./node_modules/.bin/apollo-codegen introspect-schema src/graphql/schema.graphql --output ./schema.json && ./node_modules/.bin/gql2ts ./schema.json -o ./types/graphql.d.ts",
+		"build-ts": "tsc",
+		"start": "npm run serve",
+		"serve": "node dist/server.js",
+		"test": "jest",
+		"watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run watch-node\"",
+		"watch-node": "nodemon dist/server.js",
+		"wacth-ts": "tsc -w"
+	},
+	"author": {
+		"name": "Robin Schultz",
+		"email": "robin@anigenero.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com:anigenero/LetsPlayWar.git"
+	},
+	"license": "MIT",
+	"private": true,
+	"devDependencies": {
+		"@types/express": "^4.16.0",
+		"@types/jest": "^23.3.2",
+		"@types/lodash": "^4.14.116",
+		"@types/node": "^10.11.0",
+		"apollo-codegen": "^0.20.2",
+		"concurrently": "^4.0.1",
+		"gql2ts": "^1.10.1",
+		"i": "^0.3.6",
+		"jest": "^23.6.0",
+		"jest-cli": "^23.6.0",
+		"nodemon": "^1.18.4",
+		"npm": "^6.4.1",
+		"prettier": "^1.14.3",
+		"ts-jest": "^23.10.2",
+		"ts-loader": "^5.2.1",
+		"tslint": "^5.11.0",
+		"tslint-sonarts": "^1.8.0",
+		"typescript": "^3.0.3",
+		"webpack": "^4.20.2",
+		"webpack-cli": "^3.1.1",
+		"webpack-node-externals": "^1.7.2"
+	},
+	"dependencies": {
+		"apollo-server-core": "^2.1.0",
+		"apollo-server-express": "^2.1.0",
+		"express": "^4.16.3",
+		"graphql": "^14.0.2",
+		"graphql-tag": "^2.9.2",
+		"graphql-tools": "^4.0.0",
+		"lodash": "^4.17.11",
+		"log4js2": "^2.0.0-alpha1",
+		"mysql": "^2.16.0",
+		"reflect-metadata": "^0.1.12",
+		"typeorm": "^0.2.7"
+	},
+	"jest": {
+		"coverageThreshold": {
+			"global": {
+				"branches": 90,
+				"functions": 90,
+				"lines": 90,
+				"statements": 90
+			}
+		},
+		"moduleFileExtensions": [
+			"ts",
+			"js"
+		],
+		"setupFiles": [
+			"<rootDir>/jest.setup.js"
+		],
+		"testMatch": [
+			"**/__tests__/*.(t|j)s"
+		],
+		"transform": {
+			"^.+\\.ts?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+		}
+	}
+}

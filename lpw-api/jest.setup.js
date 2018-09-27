@@ -1,0 +1,4 @@
+global.environment = {
+	production: false
+};
+

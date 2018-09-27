@@ -1,0 +1,15 @@
+version: '3.4'
+services:
+  database:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: letsplaywar1!
+      MYSQL_USER: letsplaywar
+      MYSQL_PASSWORD: letsplaywar1!
+      MYSQL_DATABASE: letsplaywar
+      MYSQL_HOST: database
