@@ -1,11 +1,70 @@
-type Person {
-    name: String!
+enum SuitEnum {
+    SPADE
+    CLUB
+    HEART
+    DIAMOND
+}
+
+type Player {
+
+    id: String!
+    username: String!
+
+}
+
+type GamePlayer {
+
+    uuid: ID!
+
+    game: Game
+    player: Player
+
+    score: Int
+
 }
 
 type Game {
-    people: [Person]
+
+    players: [Player]
+    turn: Int!
+
+    winner: Player
+
+}
+
+type Card {
+    rank: Int!
+    suit: SuitEnum
+}
+
+type PlayerCard {
+    card: Card
+}
+
+type GameTurn {
+
+    dealerCard: PlayerCard
+    game: Game
+    playerCards: [PlayerCard]
+    players: [GamePlayer]
+
+    turn: Int!
+    winner: Player
+
+}
+
+type Mutation {
+
+    addPlayer(gameId: ID!, username: String!): Game
+    createGame: Game
+    nextTurn(gameId: ID!): GameTurn
+
 }
 
 type Query {
-    games: [Game]
+
+    game(uuid: ID!): Game
+
+    topScores(limit: Int! = 10): [GamePlayer]
+
 }

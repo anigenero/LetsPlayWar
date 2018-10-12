@@ -7,6 +7,4 @@ const app = express();
 
 server.applyMiddleware({ app });
 
-app.listen({ port: 8080 }, () => {
-	console.log(server.graphqlPath);
-});
+app.listen({ port: 8080 });

@@ -36,19 +36,15 @@ module.exports = () => {
 				test: /\.js$/,
 				loader: "source-map-loader"
 			}, {
-				test: /\.(sql|hbs)$/,
+				test: /\.(sql|hbs|graphql|gql)$/,
 				exclude: /node_modules/,
 				loader: "raw-loader"
-			}, {
-				test: /\.(graphql|gql)$/,
-				exclude: /node_modules/,
-				loader: "graphql-tag/loader"
 			}]
 		},
 		plugins: [
 			new webpack.DefinePlugin({
 				environment: JSON.stringify({
-					db: {
+					database: {
 						type: 'mysql',
 						host: '0.0.0.0',
 						port: 3306,

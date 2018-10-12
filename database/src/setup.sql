@@ -6,6 +6,9 @@ CREATE SCHEMA IF NOT EXISTS `letsplaywar`
   DEFAULT CHARACTER SET utf8mb4;
 USE `letsplaywar`;
 
--- basic ddl
-SOURCE ddl/player.ddl;
 SOURCE ddl/game.ddl;
+SOURCE ddl/player.ddl;
+
+SOURCE ddl/game_player.ddl;
+
+SOURCE trigger/game_trigger.sql;
